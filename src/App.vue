@@ -1,5 +1,5 @@
 <template>
-  <h1>Job Finder</h1>
+  <h1 class="mt-5 text-center text-4xl">Job Finder</h1>
 </template>
 
 <script>
@@ -8,3 +8,12 @@ export default {
   components: {},
 };
 </script>
+
+<style>
+body {
+  background: #ccc;
+}
+h1 {
+  font-family: roboto;
+}
+</style>
