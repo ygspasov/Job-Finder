@@ -7,6 +7,11 @@ module.exports = {
       fontFamily: {
         roboto: ["Roboto Condensed", ...defaultTheme.fontFamily.sans],
       },
+      colors: {
+        "job-grey-1": "#dadce0",
+        "job-blue-1": "#1967d2",
+        "job-green-1": "#137333",
+      },
     },
   },
   plugins: [],
