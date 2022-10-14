@@ -22,27 +22,48 @@
           </ul>
         </nav>
         <div class="flex items-center h-full ml-auto">
-          <user-button
-            class="p-4 font-bold text-white bg-job-blue-1 border-0 hover:bg-sky-700 rounded-lg"
-          ></user-button>
+          <user-image v-if="isLoggedIn"></user-image>
+          <user-button v-else class="primary" @click="logIn"></user-button>
         </div>
       </div>
+      <secondary-nav></secondary-nav>
     </div>
   </header>
 </template>
 <script>
 import UserButton from "./UserButton.vue";
+import UserImage from "@/components/UserImage.vue";
+import SecondaryNav from "@/components/SecondaryNav.vue";
 export default {
   components: {
     UserButton,
+    UserImage,
+    SecondaryNav,
   },
   data() {
     return {
       site: "Job Finder",
       url: "https://carrers.google.com",
       links: ["Locations", "Application process", "Available jobs"],
+      isLoggedIn: false,
     };
+  },
+  methods: {
+    logIn() {
+      this.isLoggedIn = !this.isLoggedIn;
+    },
   },
 };
 </script>
-<style scoped></style>
+<style scoped>
+button {
+  @apply py-3 px-4 font-bold text-white  hover:bg-job-shadow-blue rounded-lg;
+}
+
+.primary {
+  @apply bg-job-blue-1;
+}
+.secondary {
+  @apply bg-job-blue-2;
+}
+</style>
