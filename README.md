@@ -1,5 +1,5 @@
 # Job Finder
 
-A VueJS app for finding jobs
+A job search portal built with VueJS
 
 ### Work in progress!

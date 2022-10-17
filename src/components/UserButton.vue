@@ -1,7 +1,10 @@
-<template><button>Sign in</button></template>
+<template>
+  <button class="bg-green pr-3">{{ buttonText }}</button>
+</template>
 <script>
 export default {
-  name: "UserButton",
+  props: ["buttonText"],
+
   methods: {},
 };
 </script>

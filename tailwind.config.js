@@ -9,6 +9,8 @@ module.exports = {
       },
       colors: {
         "job-grey-1": "#dadce0",
+        "job-grey-2": "#f8f9fa",
+        "job-grey-3": "#80868b",
         "job-blue-1": "#1967d2",
         "job-blue-2": "#007ACC",
         "job-shadow-blue": "#1261A0",

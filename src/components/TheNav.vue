@@ -23,7 +23,12 @@
         </nav>
         <div class="flex items-center h-full ml-auto">
           <user-image v-if="isLoggedIn"></user-image>
-          <user-button v-else class="primary" @click="logIn"></user-button>
+          <user-button
+            v-else
+            class="primary"
+            @click="logIn"
+            button-text="Sign in"
+          ></user-button>
         </div>
       </div>
       <secondary-nav v-if="isLoggedIn"></secondary-nav>

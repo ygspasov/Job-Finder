@@ -1,7 +1,9 @@
 <template>
-  <section>
-    <h1>{{ action }} for every job seeker</h1>
-    <h2>Find your next dream job</h2>
+  <section class="mb-14">
+    <h1 class="font-bold text-8xl mb-12">
+      <span :class="applyClasses">{{ action }}</span> for every job seeker
+    </h1>
+    <h2 class="text-3xl font-light">Find your next dream job.</h2>
   </section>
 </template>
 <script>
@@ -13,6 +15,12 @@ export default {
       interval: null,
     };
   },
+  computed: {
+    //Used to apply different classes for color styling of the action text
+    applyClasses() {
+      return this.action.toLowerCase();
+    },
+  },
   created() {
     this.switchHeadline();
   },
@@ -20,6 +28,7 @@ export default {
     clearInterval(this.interval);
   },
   methods: {
+    //Changes headline text in seconds
     switchHeadline() {
       this.interval = setInterval(() => {
         const actions = ["Built", "Created", "Designed", "Coded"];
@@ -32,4 +41,17 @@ export default {
   },
 };
 </script>
-<style></style>
+<style scoped>
+.built {
+  color: blue;
+}
+.created {
+  color: green;
+}
+.designed {
+  color: orange;
+}
+.coded {
+  color: red;
+}
+</style>
